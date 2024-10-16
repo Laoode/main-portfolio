@@ -10,6 +10,7 @@ import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
 import TattooCard from '../components/sections/TattooCard.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
+import { LINKS } from '../lib/constants'
 //
 import { motion, AnimatePresence } from 'framer-motion'
 ---
@@ -38,8 +39,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 </script>
 
 <BaseLayout
-  title="Andrés Plaza - Full Stack Developer"
-  description="Andrés Plaza - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
+  title="Yudhy Prayitno - AI Developer"
+  description="Yudhy Prayitno - AI Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
 >
   <div
     slot="loader"
@@ -53,21 +54,28 @@ import { motion, AnimatePresence } from 'framer-motion'
     <AboutMe />
     <CVCard />
     <Now />
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-2"
-      title="Portfolio & Projects"
-      href="/portfolio"
-    />
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-2" href={LINKS.github}>
+      <div class="mb-2 flex w-full items-start justify-between">
+        <div class="flex flex-col">
+          <h2>Projects</h2>
+        </div>
+      </div>
+      <p class="text-xs">⦿ Fingerprint Recognition</p>
+      <p class="text-xs">⦿ Cancer Predictor</p>
+      <p class="text-xs">⦿ Theft Detection</p>
+      <p class="text-xs">⦿ AgoraAI ChatBotApp</p>
+      <p class="text-xs">⦿ KMeans Unemployment Indonesia</p>
+      <p class="text-xs">⦿ Netflix Analytics PowerBI</p>
+    </Card>
     <TimeZoneCard />
     <ContactsCard />
     <ExperienceCard />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <div class="flex h-full flex-col justify-between">
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="Blog" href={LINKS.medium}>
+      <div class="flex h-full flex-col justify-start">
         <blockquote class="mt-6 border-l-2 pl-6 italic">
-          “Anything one man can imagine, other men can make real.”
+          “No man becomes rich unless he enriches others.”
         </blockquote>
-        <p class="mt-2 text-xs">- Jules Verne</p>
+        <p class="text-xs mt-3">- Andrew Carnegie</p>
       </div>
     </Card>
     <TattooCard />
@@ -83,3 +91,7 @@ import { motion, AnimatePresence } from 'framer-motion'
     </Card> -->
   </main>
 </BaseLayout>
+<!-- colSpan="md:col-span-1"
+rowSpan="md:row-span-2"
+title="Portfolio & Projects"
+href={LINKS.github} -->

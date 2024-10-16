@@ -7,20 +7,20 @@ export const loaderAnimation = [
 ]
 
 export const LINKS = {
-  github: 'https://github.com/bue221',
-  linkedin: 'https://www.linkedin.com/in/bue221/',
-  mail: 'mailto:camiloplaza3@gmail.com',
-  instagram: 'https://www.instagram.com/caj_ink/',
-  medium: 'https://ladvace.medium.com/',
-  discord: 'https://discordapp.com/users/163300027618295808',
+  github: 'https://github.com/Laoode',
+  linkedin: 'https://www.linkedin.com/in/la-ode-muhammad-yudhy-prayitno/',
+  mail: 'mailto:yudhyprayitno567@gmail.com',
+  instagram: 'https://www.instagram.com/yudhyprayitno',
+  medium: 'https://medium.com/@yudhyprayitno',
+  discord: 'https://discordapp.com/users/763172619196825611',
 }
 
 // Global
 export const SITE: Site = {
-  TITLE: 'Astro Sphere',
+  TITLE: 'Yudhy Prayitno',
   DESCRIPTION:
-    'Welcome to Astro Sphere, a portfolio and blog for designers and developers.',
-  AUTHOR: 'Mark Horn',
+    'Welcome to Yudhy Site, a portfolio and blog for designers and developers.',
+  AUTHOR: 'Yudhy Prayitno',
 }
 
 // Work Page
@@ -51,110 +51,61 @@ export const SEARCH: Page = {
 export const STUDIES = [
   {
     title: 'Computer Science',
-    institution: 'Universidad Central',
-    link: 'https://www.ucentral.edu.co/',
-    date: '2019 - 2027',
+    institution: 'Halu Oleo University',
+    link: 'https://uho.ac.id/en/',
+    date: '2022 - 2026',
   },
   {
     title: '...',
-    institution: 'Platzi',
-    link: 'https://platzi.com/',
-    date: '2018 - 2022',
+    institution: 'Dicoding',
+    link: 'https://www.dicoding.com/',
+    date: '2022 - 2024',
   },
   {
     title: '...',
-    institution: 'Udemy',
-    link: 'https://www.udemy.com/',
-    date: '2018 - 2022',
+    institution: 'Coursera',
+    link: 'https://www.coursera.org/',
+    date: '2023 - 2050',
   },
   {
     title: '...',
     institution: 'Youtube',
-    link: 'https://www.youtube.com/@midulive',
-    date: '2018 - 2022',
+    link: 'https://www.youtube.com/@aureusyp',
+    date: '2018 - 3000',
   },
   {
-    title: 'Tattoo Artist',
-    institution: 'Tattoo Academy',
-    link: 'https://www.instagram.com/tattoodcacademy/',
+    title: 'The Student',
+    institution: 'Akademi Crypto',
+    link: 'http://akademicrypto.com/',
     date: '2024 - 2025',
   },
 ]
 
 export const EXPERIENCE = [
   {
-    company: 'Straico',
-    location: 'Bogotá D C, Colombia',
-    position: 'Software Engineer',
-    start: '2021',
-    link: 'https://straico.com/',
+    company: 'Bangkit Academy',
+    location: 'remote',
+    position: 'Machine Learning',
+    start: 'Sep 2024',
+    link: 'https://dashboard.bangkit.academy/',
     end: 'Current',
     tasks: [
-      'Integration IA services with react and tailwind css',
-      'Development and build of DB with mongoDB',
+      'Developed a bike-sharing analysis dashboard using Python and Streamlit, incorporating business questions and exploratory data analysis. ',
+      "Completed Bangkit Academy's Machine Learning track, gaining hands-on experience in supervised learning, regression, and classification techniques. ",
+      "Proficient in Python programming, with a strong foundation in linear algebra, principal component analysis, and logistic regression for data science applications.",
     ],
   },
   {
-    company: 'Spot2',
-    location: 'Mexico City, Mexico',
-    position: 'Software Engineer',
-    link: 'https://spot2.mx/',
-    start: '2021',
-    end: 'Current',
+    company: 'ID/X Partners x Rakamin Academy',
+    location: 'Remote',
+    position: 'Data Science',
+    link: 'https://www.rakamin.com/virtual-internship-experience/id-x-partners-data-scientist',
+    start: 'Jan 2024',
+    end: 'Feb 2024',
     tasks: [
-      'Development of the Spot2 platform with the use of React, Redux, and Material UI',
-      'Development map with the use of Google Maps API',
-      'Development internal platform with the use of React, Redux, and Material UI',
-      'Testing and debugging',
-    ],
-  },
-  {
-    company: 'Imaginamos',
-    link: 'https://imaginamos.com/',
-    location: 'Bogotá D C, Colombia',
-    position: 'Frontend developer',
-    start: '2021',
-    end: '2021',
-    tasks: [
-      'Development of the Imaginamos platform with the use of React, Redux, and Material UI',
-      'Work in ETB project with the use of React, Redux, and Material UI',
-    ],
-  },
-  {
-    company: 'INETUM',
-    location: 'Bogotá D C, Colombia',
-    position: 'Frontend developer',
-    start: '2021',
-    link: 'https://www.inetum.com/es',
-    end: '2021',
-    tasks: [
-      'Support in the QA area and bug review',
-      'Use of SCRUM methodology',
-      'Claro projects with the use of frameworks and libraries such as react and angular',
-      'Use of redux toolkit as aproposal which allowed a shorter development time when using this tool',
-    ],
-  },
-  {
-    company: 'S I G',
-    location: 'Bogotá D C, Colombia',
-    position: 'Software developer',
-    start: '2021',
-    end: '2021',
-    tasks: [
-      'Development of a dashboard with react admin and chartjs for managing and entering information',
-    ],
-  },
-  {
-    company: 'BOOKII',
-    location: 'Bogotá D C, Colombia',
-    position: 'Software developer',
-    start: '2019',
-    end: '2021',
-    tasks: [
-      'Productive collaborationwiththebackendteamforthecreationofthe conversationalclubs',
-      'Effective coding of conversational clubs following design guide lines and using the Redux statemanager',
-      'Creation of the Bookii page in Spanish and change of texts in cms',
-      'Generation of static posts using Gatsby and the Contentful cms for the Bookii blog',
+      'Modeling credit risk prediction with K-Nearest Neighbors (KNN) and get 89% acuration. ',
+      'Proficient in and capable of applying a range of skills and tools including Big Data Fundamentals, Statistics & Data Analytics, SQL Querying, R Programming, Python Programming, and Machine Learning. ',
+      'Executing end-to-end Machine Learning modeling to develop data science solutions for clients.',
     ],
   },
 ]
