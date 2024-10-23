@@ -1,0 +1,28 @@
+---
+import Card from '../Card.astro'
+import { Button } from '../ui/button'
+import { CERTIFICATIONS } from '../../lib/constants'
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Certifications">
+  <div class="mt-2 space-y-4">
+    {
+      CERTIFICATIONS.slice(0, 2).map((exp) => (
+        <div>
+          <h3 class="text-lg font-semibold">
+            <a href={exp?.link ?? ''}>
+              {exp.position}
+            </a>
+          </h3>
+          <p class="text-sm text-primary">{exp.company}</p>
+          <p class="text-sm text-gray-600">
+            {exp.start} - {exp.end}
+          </p>
+        </div>
+      ))
+    }
+    <a href="/certif">
+      <Button variant="link" className="pl-0"> View More </Button>
+    </a>
+  </div>
+</Card>

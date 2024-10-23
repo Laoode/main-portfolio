@@ -7,16 +7,16 @@ const Timezone = ({ timezone }: any) => {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = moment().tz(timezone)
-      setDateTime(now.format('dddd, DD MMMM YYYY [a] h:mm:ss A'))
+      setDateTime(now.format('dddd, DD MMMM YYYY h:mm:ss A'))
     }, 1000)
 
     return () => clearInterval(interval)
   }, [timezone])
 
   return (
-    <div>
+    <div className="mt-2">
       <p>{dateTime}</p>
-      <p className="text-sm text-gray-500">Kendari City, Indonesia</p>
+      <p className="text-sm text-gray-500">Kendari, Indonesia</p>
     </div>
   )
 }

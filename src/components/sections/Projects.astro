@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import Card from '../Card.astro';
+import { Button } from '../ui/button';
+import { formateLocalDate } from "../../lib/utils";
+
+let projects = await getCollection('projects');
+
+// sort projects by startDate DESC
+projects.sort((a: any, b: any) => {
+  return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
+});
+
+projects = projects.slice(0, 3);
+---
+
+<div class="mt-2 space-y-4">
+  {
+    projects.map((project) => (
+      <div class="card">
+        <h3 class="text-lg font-semibold text-primary">
+          <a href={`/projects/${project.slug}`} class="hover:underline">
+            {project.data.title}
+          </a>
+        </h3>
+        <p class="text-sm truncate-ellipsis">
+          {project.data.description}
+        </p>
+        <p class="text-sm text-gray-600">
+          {formateLocalDate(project.data.startDate)} {project.data?.endDate ? '- ' + formateLocalDate(project.data.endDate) : ''}
+        </p>
+      </div>
+    ))
+  }
+  <a href="/projects">
+    <Button variant="link" className="pl-0">View More</Button>
+  </a>
+</div>
+
+<style>
+  /* CSS for truncating the text */
+  .truncate-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show 3 lines before truncating */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em; /* Adjust height based on number of lines */
+  }
+</style>

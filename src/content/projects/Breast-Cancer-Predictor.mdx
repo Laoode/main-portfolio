@@ -1,0 +1,54 @@
+---
+slug: "Breast-Cancer-Predictor"
+title: "The Breast Cancer Diagnosis Predictor App"
+description: "AI-powered app using logistic regression to predict breast cancer diagnosis from tumor measurements with high accuracy 97.3%."
+startDate: 2024-09-12
+image:
+  {
+    url: "https://github.com/Laoode/Cancer-Predictor/raw/main/Images/medical-tech.gif",
+    alt: "Breast Cancer Diagnosis Predictor",
+  }
+tags: ["Breast Cancer", "Machine Learning", "Logistic Regression"]
+---
+![](https://github.com/Laoode/Cancer-Predictor/raw/main/Images/medical-tech.gif)
+<h2 align="left">🔽 Overview</h2>
+<p>Breast cancer is the most common cancer among women such that the existence of a precise and reliable system for the diagnosis of benign or malignant tumors is critical. Nowadays, using machine learning techniques, detection and early diagnosis of this cancer can be done with greater accuracy. The method used in this project is logistic regression, which is a supervised learning method. To select or delete a feature, feature weighting is used. In logistic regression, the Sigmoid function is used for classification, which ensures that the output is in the range [0–1]. Simulation results show that the proposed method reaches accuracy 97.3% of our model</p>
+<p>The Breast Cancer Diagnosis app is a machine learning-powered tool designed to assist medical professionals in diagnosing breast cancer. Using a set of measurements, the app predicts whether a breast mass is benign or malignant. It provides a visual representation of the input data using a radar chart and displays the predicted diagnosis and probability of being benign or malignant. The app can be used by manually inputting the measurements or by connecting it to a cytology lab to obtain the data directly from a machine. The connection to the laboratory machine is not a part of the app itself.</p>
+
+A live version of the application can be found on [Streamlit Community Cloud](https://cancer-predictor-6fp4fsjku2yujwbalreskz.streamlit.app/).
+
+<h2 align="left">📶 Dashboard</h2>
+[![](https://github.com/Laoode/Cancer-Predictor/raw/main/Images/dashboard.png)](https://cancer-predictor-6fp4fsjku2yujwbalreskz.streamlit.app/)
+
+<h2 align="left">🔃 Installation</h2> 
+<p>You can run this inside a virtual environment to make it easier to manage dependencies. I recommend using `conda` to create a new environment and install the required packages. You can create a new environment called `breast-cancer-predictor` by running:</p>
+
+```bash
+conda create -n breast-cancer-predictor python=3.11
+```
+<p>Then, activate the environment:</p>
+
+```bash
+conda activate breast-cancer-predictor
+```
+To install the required packages, run:
+```bash
+pip install -r requirements.txt
+```
+<p>This will install all the necessary dependencies, including numpy, streamlit, sckit-learn, pandas, matplotlib</p>
+
+<h2 align="left">🌐 Usage</h2> 
+
+To start the app, simply run the following command:
+```bash
+streamlit run app/main.py
+```
+<p>After running the command, Streamlit will automatically launch the app in your default web browser.</p>
+
+<a href="https://github.com/Laoode/Cancer-Predictor" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" style="margin-right: 8px;">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+  </svg>
+  Watch this repo
+</a>
+

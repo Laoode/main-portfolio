@@ -4,13 +4,17 @@ import IntroCard from '../components/sections/IntroCard.astro'
 import AboutMe from '../components/sections/AboutMe.astro'
 import Card from '../components/Card.astro'
 import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
-import ContactsCard from '../components/sections/ContactsCard.astro'
+import Projects from '../components/sections/Projects.astro'
+import BlogCard from '../components/sections/BlogCard.astro'
 import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
+import CertificationsCard from '../components/sections/CertificationsCard.astro'
+import Books from '../components/sections/Books.astro'
 import TattooCard from '../components/sections/TattooCard.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
 import { LINKS } from '../lib/constants'
+import TimeZoneV2 from '../components/sections/TimeZoneCardV2'
 //
 // import { motion, AnimatePresence } from 'framer-motion'
 ---
@@ -54,23 +58,15 @@ import { LINKS } from '../lib/constants'
     <AboutMe />
     <CVCard />
     <Now />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-2" href={LINKS.github}>
-      <div class="mb-2 flex w-full items-start justify-between">
-        <div class="flex flex-col">
-          <h2>Projects</h2>
-        </div>
-      </div>
-      <p class="text-xs">⦿ Fingerprint Recognition</p>
-      <p class="text-xs">⦿ Cancer Predictor</p>
-      <p class="text-xs">⦿ Theft Detection</p>
-      <p class="text-xs">⦿ AgoraAI ChatBotApp</p>
-      <p class="text-xs">⦿ KMeans Unemployment Indonesia</p>
-      <p class="text-xs">⦿ Netflix Analytics PowerBI</p>
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="My time">
+      <TimeZoneV2 timezone="Asia/Makassar" client:load />
     </Card>
     <TimeZoneCard />
-    <ContactsCard />
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-4" title="Projects">
+      <Projects/>
+    </Card>
     <ExperienceCard />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="Blog" href={LINKS.medium}>
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <div class="flex h-full flex-col justify-start">
         <blockquote class="mt-6 border-l-2 pl-6 italic">
           “No man becomes rich unless he enriches others.”
@@ -80,6 +76,13 @@ import { LINKS } from '../lib/constants'
     </Card>
     <TattooCard />
     <StudyCard />
+    <CertificationsCard />
+    <Card colSpan="lg:col-span-2" rowSpan="md:row-span-2" title='Blog Posts'>
+      <BlogCard />
+    </Card> 
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Books I read">
+      <Books/>
+    </Card>
     <!-- <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">
         © 2023 · Crafted with ♥️ using <a
@@ -95,3 +98,14 @@ import { LINKS } from '../lib/constants'
 rowSpan="md:row-span-2"
 title="Portfolio & Projects"
 href={LINKS.github} -->
+<script>
+  // Immediately apply the dark mode based on localStorage or system preference
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>

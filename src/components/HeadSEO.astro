@@ -1,45 +1,49 @@
 ---
 import '@/styles/globals.css'
-import '@/styles/fonts.css'
 
 interface Props {
-  title?: string | undefined
-  description?: string | undefined
-  ogImage?: URL | undefined
+  title?: string
+  description?: string
+  ogImage?: URL
+  canonicalURL?: URL
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-
-if (Astro.props.ogImage === undefined) {
-  Astro.props.ogImage = new URL('View1.png', canonicalURL)
-}
-
-const { title, description, ogImage } = Astro.props
+const {title, description, ogImage, canonicalURL} = Astro.props
+const canonical = canonicalURL? canonicalURL: new URL(Astro.url.pathname, Astro.site)
 ---
 
-<meta charset="utf-8" />
-<meta name="robots" content="index, follow" />
-<meta name="googlebot" content="index, follow" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="generator" content={Astro.generator} />
-<link rel="canonical" href={canonicalURL} />
+<meta charset="utf-8"/>
+<meta name="robots" content="index, follow"/>
+<meta name="googlebot" content="index, follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="generator" content={Astro.generator}/>
+<link rel="canonical" href={canonical}/>
 <link
   rel="shortcut icon"
-  type="image/svg+xml"
-  href={`${Astro.site}favicon.svg`}
+  type="image/png"
+  href={`public/my-logo.png`}
 />
 <title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<meta name="title" content={title}/>
+<meta name="description" content={description}/>
 
-<meta property="og:type" content="website" />
-<meta property="og:url" content={canonicalURL} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website"/>
+<meta property="og:url" content={canonical}/>
+<meta property="og:title" content={title}/>
+<meta property="og:description" content={description}/>
+{
+  ogImage ?
+  <>
+    <meta property="og:image" content={ogImage}/>
+    <meta property="twitter:image" content={ogImage}/>
+  </>:
+  <></>
+  }
 
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonicalURL} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={ogImage} />
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:url" content={canonical}/>
+<meta property="twitter:title" content={title}/>
+<meta property="twitter:description" content={description}/>
+
+<link rel="preload" href="shttps://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"></noscript>
