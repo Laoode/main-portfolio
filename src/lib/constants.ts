@@ -119,6 +119,108 @@ export const EXPERIENCE = [
 export const CERTIFICATIONS =[
   {
     company: 'DeepLearning.AI',
+    position: 'Custom and Distributed Training with TensorFlow',
+    start: 'Nov 29, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/V2GIBUTY8RDO',
+    end: '',
+    tasks: [
+      'Distribution Strategies, GradientTape for Optimization, Custom Training Loops, Basic Tensor Functionality.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Custom Models, Layers, and Loss Functions with TensorFlow',
+    start: 'Nov 28, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/JFM61AFG2FDO',
+    end: '',
+    tasks: [
+      'Functional API, Custom and Exotic Models with Functional API, Custom Loss Functions, Custom Layers.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Browser-based Models with TensorFlow.js',
+    start: 'Nov 17, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/K8FYBI3B203S',
+    end: '',
+    tasks: [
+      'Train and run inference in a browser, Handle data in a browser, Build an object classification and recognition model using a webcam.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Data Pipelines with TensorFlow Data Services',
+    start: 'Nov 17, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/4XD05ZSLBJNY',
+    end: '',
+    tasks: [
+      'Perform efficient ETL tasks using Tensorflow Data Services APIs.',
+      'Use different modules and functions of the TFDS API to prepare your data for training pipelines.',
+      'Construct train/validation/test splits of any dataset - either custom or present in TensorFlow Hub Dataset library - using Splits API.',
+      'Identify bottlenecks in your input pipelines and increase your workflow efficiency by input parallelization.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Device-based Models with TensorFlow Lite',
+    start: 'Nov 17, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/4KJYLXT29567',
+    end: '',
+    tasks: [
+      'Prepare models for battery-operated devices.',
+      'Deploy models on embedded systems like Raspberry Pi and microcontrollers.',
+      'Execute models on Android and iOS platforms.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Sequences, Time Series and Prediction',
+    start: 'Nov 9, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/BFQNGOMRWGY4',
+    end: '',
+    tasks: [
+      'Solve time series and forecasting problems in TensorFlow.',
+      'Prepare data for time series learning using best practices.',
+      'Explore how RNNs and ConvNets can be used for predictions.',
+      'Build a sunspot prediction model using real-world data.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Structuring Machine Learning Projects',
+    start: 'Nov 9, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/0B618XDAIVMV',
+    end: '',
+    tasks: [
+      'Decision-Making, Machine Learning, Deep Learning, Inductive Transfer, Multi-Task Learning',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Natural Language Processing in TensorFlow',
+    start: 'Nov 6, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/P4ZE73VPHU5V',
+    end: '',
+    tasks: [
+      'Build natural language processing systems using TensorFlow.',
+      'Apply RNNs, GRUs, and LSTMs in TensorFlow.',
+      'Process text, including tokenization and representing sentences as vectors.',
+      'Train LSTMs on existing text to create original poetry and more.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Convolutional Neural Networks in TensorFlow',
+    start: 'Oct 28, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/82RCKDTV6OPX',
+    end: '',
+    tasks: [
+      'Explore strategies to prevent overfitting, including augmentation and dropout.',
+      "Learn transfer learning and how learned features can be extracted from models.",
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
     position: 'Advanced Learning Algorithms',
     start: 'Oct 22, 2024',
     link: 'https://www.coursera.org/account/accomplishments/verify/IOOELUOX3KZF',
