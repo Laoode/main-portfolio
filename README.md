@@ -6,8 +6,6 @@ This template helps you build a portfolio using Astro, Tailwind CSS, and Shadcn 
 
 ## Design
 
-![View 1](public/Full-View.png)
-
 ## Inspiration
 
 This project was inspired by several outstanding portfolios. Here are some that served as references:
