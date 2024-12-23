@@ -119,6 +119,39 @@ export const EXPERIENCE = [
 export const CERTIFICATIONS =[
   {
     company: 'DeepLearning.AI',
+    position: 'Build Basic Generative Adversarial Networks (GANs)',
+    start: 'Dec 21, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/2K8R2FRIDKCK',
+    end: '',
+    tasks: [
+      'Components of GANs, WGANs, DCGANs, Controllable Generation, Conditional Generation.'
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Generative AI for Everyone',
+    start: 'Dec 8, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/4K0TYVBNYCO0',
+    end: '',
+    tasks: [
+      'What generative AI is and how it works, its common use cases, and what this technology can and cannot do.',
+      'The potential opportunities and risks that generative AI technologies present to individuals, businesses, and society.',
+      'How to think through the lifecycle of a generative AI project, from conception to launch, including how to build effective prompts.',
+      'Generative AI Tools, Large Language Models, AI strategy, Generative AI, AI Productivity.'
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
+    position: 'Advanced Computer Vision with TensorFlow',
+    start: 'Dec 5, 2024',
+    link: 'https://www.coursera.org/account/accomplishments/verify/P7X89PHZY5CY',
+    end: '',
+    tasks: [
+      'TensorFlow Object Detection API, Class Activation Maps, Model Interpretability, Image Segmentation, Salience.',
+    ],
+  },
+  {
+    company: 'DeepLearning.AI',
     position: 'Custom and Distributed Training with TensorFlow',
     start: 'Nov 29, 2024',
     link: 'https://www.coursera.org/account/accomplishments/verify/V2GIBUTY8RDO',
