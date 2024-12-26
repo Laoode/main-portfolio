@@ -1,4 +1,4 @@
----
+<!-- ---
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
 ---
@@ -25,4 +25,38 @@ import { LINKS } from '../../lib/constants'
       </p>
     </div>
   </div>
+</Card> -->
+---
+import Card from '../Card.astro'
+import { LINKS } from '../../lib/constants'
+---
+
+<Card
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-2"
+  title="Instagram Yudhy's"
+  href={LINKS.instagram}
+>
+  <div class="flex h-full w-full flex-col">
+    <div class="relative w-full">
+      <img
+        src="/me-ai.gif"
+        class="h-auto w-full object-contain"
+        alt="memoji of yudhy"
+      />
+    </div>
+    <div class="mt-4">
+      <p class="text-sm text-muted-foreground">
+        If you want to build a team with me to grow a business, enter competitions, or pursue investments, you can follow and dm me on Instagram.
+      </p>
+    </div>
+  </div>
 </Card>
+
+<style>
+  /* Menghapus aspect-ratio tetap untuk memungkinkan gambar mempertahankan proporsi aslinya */
+  img {
+    display: block;
+    max-height: 300px; /* atau sesuaikan dengan tinggi yang diinginkan */
+  }
+</style>

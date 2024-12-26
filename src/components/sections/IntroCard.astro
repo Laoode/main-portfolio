@@ -6,23 +6,39 @@ import { Linkedin, Github, Mail } from 'lucide-react'
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
-  <div class="flex h-full w-full">
-    <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
-      <div class="flex h-full flex-col">
+  <div class="flex h-full w-full flex-col md:flex-row">
+    <div class="flex flex-col justify-between gap-4">
+      <div class="flex flex-col">
         <p class="m-0 text-xl font-light">
           Hello, I'm
-          <b class="font-bold">Yudhy Prayitno</b>.
-          <p> </p>
+          <b class="font-bold">Yudhy Prayitno</b>
         </p>
+        
+        <!-- Gambar untuk mobile dengan container terpisah dan centered -->
+        <div class="flex w-full justify-center md:hidden">
+          <img
+            width="300"
+            height="300"
+            src="/me-intro.gif"
+            class="my-4 h-auto w-auto max-w-[200px]"
+            alt="ai me"
+          />
+        </div>
+        
         <p class="m-0 mt-2 text-md">
           A skilled professional specializing in <b class="font-bold">computer science</b>
           with a focus on <b class="font-bold">machine learning</b> and <b class="font-bold">blockchain technology</b>. I'm passionate about staying at the 
           forefront of industry developments through continuous learning and collaboration with experts, teams, 
           and communities.
         </p>
-        <p class="m-0 mt-2 text-md">📈 Unprofessional Investor</p>
-        <p class="m-0 text-md">🌱 Part-time blogger</p>
-        <p class="m-0 text-md">📚 Book reader | 🤵‍♂️ Entrepreneur | 🏓 Table Tennis</p>
+        <div class="mt-4 space-y-1">
+          <p class="m-0 text-md">📈 Unprofessional Investor</p>
+          <p class="m-0 text-md">🌱 Part-time blogger</p>
+          <p class="m-0 text-md whitespace-normal md:whitespace-nowrap">
+            <span class="inline-block">📚 Book reader | 🤵‍♂️ Entrepreneur</span> <span class="hidden md:inline">|</span>
+            <span class="block md:inline"> 🏓 Table Tennis</span>
+          </p>
+        </div>
       </div>
       <div class="flex gap-4">
         <a href={LINKS.github} aria-label="github profile" target="_blank">
@@ -45,12 +61,21 @@ import { Linkedin, Github, Mail } from 'lucide-react'
         </a>
       </div>
     </div>
+    <!-- Gambar untuk desktop -->
     <img
       width="300"
       height="300"
       src="/me-intro.gif"
-      class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
+      class="hidden md:block md:max-h-[300px] md:w-auto md:flex-shrink-0"
       alt="ai me"
     />
   </div>
 </Card>
+
+<style>
+  @media (max-width: 768px) {
+    :global(.intro-card) {
+      padding: 1.5rem !important;
+    }
+  }
+</style>

@@ -1,15 +1,15 @@
 ---
 import Card from '../Card.astro'
 import TimeZoneV2 from './TimeZoneCardV2'
-
 ---
 
 <Card colSpan="lg:col-span-2" rowSpan="md:row-span-2">
-  <div
-    class="h-full w-full absolute inset-0 -z-10"
-    style="background-image: url('/Thumbnail.png'); background-size: cover; background-position: center;"
-  >
-    <!-- Content goes here -->
-  </div>
+    <div 
+      class="h-full w-full relative aspect-[16/9] md:absolute md:inset-0 md:aspect-auto -z-10"
+      style="background-image: url('/Thumbnail.png'); 
+              background-size: cover; 
+              background-position: center;"
+    >
+      <!-- Content goes here -->
+    </div>
 </Card>
-
