@@ -63,3 +63,16 @@
     font-weight: 300 !important;
   }
 }
+
+@layer components {
+  pre {
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  code {
+    display: block; /* Memastikan code block mengambil lebar penuh */
+    white-space: pre; /* Mencegah teks wrap */
+  }
+}
