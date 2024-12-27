@@ -4,11 +4,10 @@ import IndexPageLayout from "./IndexPageLayout.astro";
 
 const {frontmatter} = Astro.props;
 const {title, description, image, startDate, tags, canonical} = frontmatter;
-// frontmatter is from MDX metadata for MD pages, we now use content for data now, we use frontmatter for backward compatibility
 ---
 
 <IndexPageLayout title={title} description={description} image={image} subTitle={title} canonicalURL={canonical}>
-  <div class="w-full justify-center flex flex-col">
+  <div class="w-full max-w-full justify-center flex flex-col">
     {tags &&
       <div class="pb-4 mx-auto">
         <ContentTags tags={tags}/>
@@ -18,14 +17,13 @@ const {title, description, image, startDate, tags, canonical} = frontmatter;
       startDate &&
       <div class="text-sm text-light my-2 sr-only mx-auto">
         {startDate}
-        <!--  screen reader only date-->
       </div>
     }
 
-    <article class="prose mx-auto dark:prose-invert ">
-      <!--required with tailwind typography plugin + prose to render html-->
-      <slot/>
+    <article class="prose prose-lg mx-auto dark:prose-invert max-w-full md:max-w-prose overflow-hidden">
+      <div class="mdx-content w-full max-w-full overflow-hidden">
+        <slot/>
+      </div>
     </article>
   </div>
-
 </IndexPageLayout>

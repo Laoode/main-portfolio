@@ -65,14 +65,38 @@
 }
 
 @layer components {
-  pre {
-    padding: 1rem;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: pre;
+  /* Container styling untuk konten MDX */
+  .mdx-content {
+    @apply w-full max-w-full overflow-hidden;
   }
-  code {
-    display: block; /* Memastikan code block mengambil lebar penuh */
-    white-space: pre; /* Mencegah teks wrap */
+
+  /* Basic pre styling */
+  pre {
+    @apply my-4 w-full max-w-[calc(100vw-2rem)] overflow-x-auto rounded-lg p-4;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  pre code {
+    @apply block w-auto;
+  }
+
+  /* Code block dengan horizontal scroll */
+  .prose pre code {
+    @apply inline-block whitespace-pre;
+  }
+
+  /* Khusus untuk command yang panjang */
+  .prose .bash-command {
+    @apply overflow-x-auto whitespace-pre;
+  }
+
+  /* Memastikan images juga responsive */
+  .prose img {
+    @apply max-w-full h-auto;
+  }
+
+  /* Memastikan paragraf tidak overflow */
+  .prose p {
+    @apply w-full max-w-full break-words;
   }
 }
