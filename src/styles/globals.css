@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    color-scheme: dark light;
     --background: 0 0% 100%;
     --foreground: 213 100% 5%;
     --card: 0 0% 100%;
@@ -24,6 +25,10 @@
     --input: 20 5.9% 90%;
     --ring: 24.6 95% 53.1%;
     --radius: 1rem;
+  }
+
+  html {
+    @apply dark;
   }
 
   .dark {
