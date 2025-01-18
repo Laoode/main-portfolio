@@ -89,16 +89,25 @@ export const STUDIES = [
 
 export const EXPERIENCE = [
   {
-    company: 'Bangkit Academy',
-    location: 'remote',
-    position: 'Machine Learning',
-    start: 'Sep 2024',
-    link: 'https://dashboard.bangkit.academy/',
+    company: 'Central Bureau of Statistics (CBS)',
+    location: 'onsite',
+    position: 'Data Analyst',
+    start: 'Jan 2025',
+    link: 'https://sultra.bps.go.id/id',
     end: 'Current',
     tasks: [
-      'Developed a bike-sharing analysis dashboard using Python and Streamlit, incorporating business questions and exploratory data analysis. ',
-      "Completed Bangkit Academy's Machine Learning track, gaining hands-on experience in supervised learning, regression, and classification techniques. ",
-      "Proficient in Python programming, with a strong foundation in linear algebra, principal component analysis, and logistic regression for data science applications.",
+      "Learning and implementing best practices in data visualization using Tableau.",
+    ],
+  },
+  {
+    company: 'Bangkit Academy',
+    location: 'remote',
+    position: 'ML Developer',
+    start: 'Sep 2024',
+    link: 'https://dashboard.bangkit.academy/',
+    end: 'Dec 2024',
+    tasks: [
+      "As a Machine Learning Cohort, Project Leader, and ML Developer during this program, I led a team of 7 developers, overseeing tasks, workflows, and project timelines to ensure smooth and successful product development. I also served as a Peer Tutor for the Crash Course on Python, where I mentored students in Python fundamentals and basic programming concepts. Additionally, I developed a Student Feedback Analysis system using a BERT multi-class model with TensorFlow, achieving 98% accuracy, and created an AI Recommendation System for teachers based on student feedback leveraging the Gemini API.",
     ],
   },
   {
